@@ -6,6 +6,7 @@ import  { AppSidebar } from "./components/sidebar"
 import { cn } from "@/lib/utils"
 import { Toaster } from "react-hot-toast"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import Footer from "@/components/layout/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,11 +32,13 @@ export default function RootLayout({
           <SidebarProvider>
       <AppSidebar />
       <main className="flex-1 p-8">
-        <SidebarTrigger />
+        
         {children}
       </main>
     </SidebarProvider>
       </body>
+
+      <Footer />
     </html>
   )
 }

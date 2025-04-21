@@ -29,6 +29,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import Header from "@/(admin)/components/header"
 
 export default function BookingsPage() {
   // Stats data
@@ -263,43 +264,7 @@ export default function BookingsPage() {
       {/* Main Content */}
       <div className="flex-1 overflow-auto">
         {/* Header */}
-        <header className="bg-white border-b p-4 flex justify-between items-center">
-          <div>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <Link href="/" className="hover:text-gray-700">
-                Dashboard
-              </Link>
-              <span>/</span>
-              <span className="text-gray-700">Bookings</span>
-            </div>
-            <h1 className="text-2xl font-semibold mt-1">Bookings</h1>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <div className="relative">
-              <Input placeholder="Search anything" className="w-64 pl-10 bg-gray-50 border-gray-200" />
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-            </div>
-
-            <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white">
-              <Bell className="h-4 w-4" />
-            </div>
-
-            <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white">
-              <Settings className="h-4 w-4" />
-            </div>
-
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full overflow-hidden">
-                <img src="/placeholder.svg?height=32&width=32" alt="Profile" className="w-full h-full object-cover" />
-              </div>
-              <div>
-                <p className="text-sm font-medium">Orlando Laurentius</p>
-                <p className="text-xs text-gray-500">Admin</p>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header link="Bookings" />
 
         {/* Dashboard Content */}
         <div className="p-6">
@@ -641,30 +606,7 @@ export default function BookingsPage() {
         </div>
 
         {/* Footer */}
-        <footer className="p-4 border-t mt-auto">
-          <div className="flex justify-between items-center text-xs text-gray-500">
-            <p>Copyright © 2025 Peterdraw</p>
-            <div className="flex gap-4">
-              <span>Privacy Policy</span>
-              <span>Term and conditions</span>
-              <span>Contact</span>
-            </div>
-            <div className="flex gap-2">
-              <Button variant="ghost" size="icon" className="h-6 w-6">
-                <HelpCircle className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-6 w-6">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-6 w-6">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="h-6 w-6">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </footer>
+        
       </div>
     </div>
   )

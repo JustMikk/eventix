@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 // Menu items.
 const items = [
@@ -83,6 +84,12 @@ const items = [
 
 
 export function AppSidebar() {
+  const [isClient, setIsClient] = useState(false)
+ 
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  
   const pathname = usePathname();
   return (
     <Sidebar >

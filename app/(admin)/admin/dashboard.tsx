@@ -24,16 +24,12 @@ import {
   featuredEventData,
   calendarEventData,
 } from "@/constants/dashboard"
+import Header from "../components/header"
 
 export default function Dashboard() {
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-muted-foreground">Hello Orlando, welcome back!</span>
-        </div>
-      </div>
+      <Header link="Dashboard" />
 
       {/* Stats Overview */}
       <div className="grid gap-4 md:grid-cols-3">
