@@ -1,133 +1,110 @@
-// Dashboard static data
-
-// Stats data
-export const statsData = {
-  upcomingEvents: "345",
-  totalBookings: "1,798",
-  ticketsSold: "1,250",
-};
-
-// Ticket sales data
-export const ticketSalesData = {
-  total: 2780,
-  soldOut: 1251,
-  fullyBooked: 834,
-  available: 695,
-};
-
-// Chart data for ticket sales
-export const ticketChartData = [
+export const ticketData = [
   { name: "Sold Out", value: 1251, color: "#f364f3" },
   { name: "Fully Booked", value: 834, color: "#2d3a5d" },
   { name: "Available", value: 695, color: "#e6e6e6" },
-];
+]
 
-// Revenue chart data
 export const revenueData = [
-  { month: "Jan", revenue: 40000, profit: 25000 },
-  { month: "Feb", revenue: 35000, profit: 22000 },
-  { month: "Mar", revenue: 45000, profit: 28000 },
-  { month: "Apr", revenue: 56320, profit: 35200 },
-  { month: "May", revenue: 48000, profit: 30000 },
-  { month: "Jun", revenue: 38000, profit: 24000 },
-  { month: "Jul", revenue: 35000, profit: 22000 },
-  { month: "Aug", revenue: 42000, profit: 26000 },
-];
+  { month: "Jan", revenue: 28000, profit: 15000 },
+  { month: "Feb", revenue: 22000, profit: 12000 },
+  { month: "Mar", revenue: 32000, profit: 18000 },
+  { month: "Apr", revenue: 42000, profit: 25000 },
+  { month: "May", revenue: 35000, profit: 20000 },
+  { month: "Jun", revenue: 30000, profit: 16000 },
+  { month: "Jul", revenue: 25000, profit: 14000 },
+  { month: "Aug", revenue: 38000, profit: 22000 },
+]
 
-// Popular categories data
-export const popularCategoriesData = [
-  { name: "Music", count: 20000, percentage: 40, color: "#f364f3" },
-  { name: "Sports", count: 17500, percentage: 35, color: "#2d3a5d" },
-  { name: "Fashion", count: 12500, percentage: 25, color: "#e6e6e6" },
-];
+export const popularEvents = [
+  { category: "Music", percentage: 40, count: "20,000", color: "#f364f3" },
+  { category: "Sports", percentage: 35, count: "17,500", color: "#f364f3" },
+  { category: "Fashion", percentage: 15, count: "12,500", color: "#2d3a5d" },
+]
 
-// Recent bookings data
-export const recentBookingsData = [
+export const allEvents = [
   {
-    id: "INV10011",
-    customerName: "Jackson Moore",
-    eventName: "Symphony Under the Stars",
-    date: "2024/02/15",
-    amount: 100,
-    status: "confirmed" as const,
+    id: 1,
+    title: "Champions League Screening Night",
+    location: "SkyDome Stadium, Toronto, ON",
+    date: "Apr 20, 2029",
+    price: "$30",
+    image: "/placeholder.svg?height=200&width=400",
+    category: "Sport",
   },
   {
-    id: "INV10012",
-    customerName: "Alicia Smithson",
-    eventName: "Runway Revolution 2024",
-    date: "2024/02/16",
-    amount: 120,
-    status: "pending" as const,
+    id: 2,
+    title: "Culinary Delights Festival",
+    location: "Gourmet Plaza, San Francisco, CA",
+    date: "Mar 3, 2029",
+    price: "$40",
+    image: "/placeholder.svg?height=200&width=400",
+    category: "Food & Culinary",
   },
   {
-    id: "INV10013",
-    customerName: "Marcus Rawless",
-    eventName: "Global Wellness Summit",
-    date: "2024/02/17",
-    amount: 240,
-    status: "confirmed" as const,
-  },
-  {
-    id: "INV10014",
-    customerName: "Patrick Cooper",
-    eventName: "Champions League Screening Night",
-    date: "2024/02/18",
-    amount: 120,
-    status: "cancelled" as const,
-  },
-  {
-    id: "INV10015",
-    customerName: "Gilda Ramos",
-    eventName: "Artistry Unveiled: Modern Art Expo",
-    date: "2024/02/18",
-    amount: 50,
-    status: "confirmed" as const,
-  },
-];
-
-// Calendar event data
-export const calendarEventData = [
-  {
-    id: "3",
-    title: "Panel Discussion",
-    subtitle: "Tech Beyond 2024",
-    date: "Mar 3",
-    time: "10:00 AM - 12:00 PM",
-    category: "Technology",
-  },
-  {
-    id: "5",
-    title: "Live Concert",
-    subtitle: "Echo Beats Festival",
-    date: "Mar 5",
-    time: "6:00 PM - 11:00 PM",
-    category: "Music",
-  },
-  {
-    id: "23",
-    title: "Fashion Showcase",
-    subtitle: "Spring Trends Runway Show",
-    date: "Mar 23",
-    time: "3:00 PM - 5:00 PM",
+    id: 3,
+    title: "Artistry Unveiled: Modern Art Expo",
+    location: "Vogue Hall, Los Angeles, CA",
+    date: "Mar 10, 2029",
+    price: "$110",
+    image: "/placeholder.svg?height=200&width=400",
     category: "Fashion",
   },
-];
+]
 
-// Featured event data
-export const featuredEventData = {
-  id: "1",
-  title: "Rhythm & Beats Music Festival",
-  location: "Sunset Park, Los Angeles, CA",
-  date: "Apr 20, 2029",
-  time: "12:00 PM",
-  endTime: "11:00 PM",
-  imageUrl: "/images/music-festival.jpg",
-  category: "Music",
-  description: "Immerse yourself in electrifying performances by top pop, rock, EDM, and hip-hop artists, indulge in delicious food, and create unforgettable memories.",
-};
+export const recentBookings = [
+  {
+    invoiceId: "INV10011",
+    date: "2029/02/15 10:30 AM",
+    name: "Jackson Moore",
+    event: "Symphony Under the Stars",
+    category: "Music",
+    qty: 2,
+    amount: "$100",
+    status: "Confirmed",
+  },
+  {
+    invoiceId: "INV10012",
+    date: "2029/02/16 03:45 PM",
+    name: "Alicia Smithson",
+    event: "Runway Revolution 2024",
+    category: "Fashion",
+    qty: 1,
+    amount: "$120",
+    status: "Pending",
+  },
+  {
+    invoiceId: "INV10013",
+    date: "2029/02/17 01:15 PM",
+    name: "Marcus Rawless",
+    event: "Global Wellness Summit",
+    category: "Beauty & Wellness",
+    qty: 3,
+    amount: "$240",
+    status: "Confirmed",
+  },
+  {
+    invoiceId: "INV10014",
+    date: "2029/02/18 09:00 AM",
+    name: "Patrick Cooper",
+    event: "Champions League Screening Night",
+    category: "Sport",
+    qty: 4,
+    amount: "$120",
+    status: "Cancelled",
+  },
+  {
+    invoiceId: "INV10015",
+    date: "2029/02/18 05:30 PM",
+    name: "Gilda Ramos",
+    event: "Artistry Unveiled: Modern Art Expo",
+    category: "Art & Design",
+    qty: 2,
+    amount: "$50",
+    status: "Confirmed",
+  },
+]
 
-// Recent activity data
-export const recentActivityData = [
+export const recentActivity = [
   {
     id: 1,
     user: "Admin Stefanus Weber",
@@ -162,4 +139,82 @@ export const recentActivityData = [
     time: "09:30 AM",
     icon: "new",
   },
-]; 
+]
+
+export const upcomingEvents = [
+  {
+    id: 1,
+    title: "Rhythm & Beats Music Festival",
+    location: "Sunset Park, Los Angeles, CA",
+    date: "Apr 20, 2029",
+    time: "12:00 PM - 11:00 PM",
+    category: "Music",
+    image: "/placeholder.svg?height=200&width=400",
+    description:
+      "Immerse yourself in electrifying performances by top pop, rock, EDM, and hip-hop artists, indulge in delicious food, and create unforgettable memories.",
+  },
+  {
+    id: 2,
+    title: "Panel Discussion",
+    subtitle: "Tech Beyond 2024",
+    date: "Mar 3, 2029",
+    time: "10:00 AM - 12:00 PM",
+    category: "Technology",
+  },
+  {
+    id: 3,
+    title: "Live Concert",
+    subtitle: "Echo Beats Festival",
+    date: "Mar 5, 2029",
+    time: "6:00 PM - 11:00 PM",
+    category: "Music",
+  },
+  {
+    id: 4,
+    title: "Fashion Showcase",
+    subtitle: "Spring Trends Runway Show",
+    date: "Mar 23, 2029",
+    time: "3:00 PM - 5:00 PM",
+    category: "Fashion",
+  },
+]
+
+// Calendar data
+export const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+export const calendarDays = [
+  { day: 25, month: "Feb", current: false },
+  { day: 26, month: "Feb", current: false },
+  { day: 27, month: "Feb", current: false },
+  { day: 28, month: "Feb", current: false },
+  { day: 1, month: "Mar", current: true },
+  { day: 2, month: "Mar", current: true },
+  { day: 3, month: "Mar", current: true, hasEvent: true },
+  { day: 4, month: "Mar", current: true },
+  { day: 5, month: "Mar", current: true, hasEvent: true },
+  { day: 6, month: "Mar", current: true },
+  { day: 7, month: "Mar", current: true },
+  { day: 8, month: "Mar", current: true },
+  { day: 9, month: "Mar", current: true },
+  { day: 10, month: "Mar", current: true },
+  { day: 11, month: "Mar", current: true },
+  { day: 12, month: "Mar", current: true },
+  { day: 13, month: "Mar", current: true },
+  { day: 14, month: "Mar", current: true, isToday: true },
+  { day: 15, month: "Mar", current: true },
+  { day: 16, month: "Mar", current: true },
+  { day: 17, month: "Mar", current: true },
+  { day: 18, month: "Mar", current: true },
+  { day: 19, month: "Mar", current: true },
+  { day: 20, month: "Mar", current: true },
+  { day: 21, month: "Mar", current: true },
+  { day: 22, month: "Mar", current: true },
+  { day: 23, month: "Mar", current: true, hasEvent: true },
+  { day: 24, month: "Mar", current: true },
+  { day: 25, month: "Mar", current: true },
+  { day: 26, month: "Mar", current: true },
+  { day: 27, month: "Mar", current: true },
+  { day: 28, month: "Mar", current: true },
+  { day: 29, month: "Mar", current: true },
+  { day: 30, month: "Mar", current: true },
+  { day: 31, month: "Mar", current: true },
+]
